@@ -1,0 +1,101 @@
+body{
+    margin:0%;
+    padding:0%;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#navbar{
+    height: 13.5vh;
+    width: 100vw;
+    position:fixed;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    padding-left: .5vw;
+}
+
+#navbar .line{
+    height: 1.5px;
+    width: 100%;
+    background-image: linear-gradient(to left, #00000000, #3A8EF6, #703afae9, #3A8EF6, #00000000);
+}
+
+#logo{
+    height:9vh;
+    margin-left:3vw;
+}
+
+#logo img{
+    height: inherit;
+    aspect-ratio: 1;
+}
+
+#logo h3{
+    text-align: center;
+    margin-left: 2vh;
+    font-weight: 800;
+    background: linear-gradient(80deg, #3A8EF6, #6F3AFA);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav{
+    align-items: center;
+    height: 1em;
+    padding-right: 5vw;
+}
+
+nav a{
+    margin-right: 3vw;
+    padding: 0% .3em;
+    box-sizing: border-box !important;
+    text-decoration: none;
+    color: #404040;
+}
+
+nav a p{
+    text-align: center;
+    margin-bottom: 0px;
+    font-weight: 500;
+}
+
+nav .active{
+    border-bottom:3px solid #6F3AFA;
+    border-top:3px solid transparent;
+}
+
+nav a:hover{
+    color:black;
+}
+
+#footer{
+    width:100vw;
+    height:30vh;
+    padding: 1.5vh;
+    box-sizing: border-box;
+    border-top: 2px solid #0000002f;
+}
+
+#icon2{
+    height:62.5%;
+}
+
+#icon2 img{
+    height: 100%;
+    aspect-ratio: 1;
+}
+
+#icon2 h2{
+    text-align: center;
+    margin-left: 4vh;
+    font-weight: 800;
+    background: linear-gradient(80deg, #3A8EF6, #6F3AFA);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.line{
+    height: 100%;
+    width: 1.5px;
+    background-color: #0000002f;
+    margin: 0px 2vw;
+}
