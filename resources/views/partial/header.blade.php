@@ -1,6 +1,6 @@
 <div id="navbar" class="d-flex align-items-center">
     <div id="logo" class="d-flex align-items-center">
-        <img src="./favicon.png" alt="" class="position-relative top-50 translate-middle-y">
+        <img src="{{asset('favicon.png')}}" alt="" class="position-relative top-50 translate-middle-y">
         <h3 class="">FitTech</h3>
     </div>
     <nav class="d-flex position-absolute align-items-center end-0">
