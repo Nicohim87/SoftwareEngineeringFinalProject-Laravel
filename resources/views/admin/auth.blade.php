@@ -14,22 +14,42 @@
     </style>
 </head>
 <body class="position-fixed vh-100 vw-100 bg-body-secondary">
-    <div id="mainBox" class=" bg-light shadow-sm position-absolute top-50 start-50 translate-middle p-4 text-center">
+    <div id="mainBox" class=" bg-light shadow-sm position-fixed top-50 start-50 translate-middle p-4 text-center">
         
         <img src="{{asset('favicon.png')}}" alt="", style="width:4vw; aspect-ratio:1;">
 
         <h2 class="mb-5" style="width:100%">Log in</h2>
 
-        <div class="mb-4">
-            <input id="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Name">
-        </div>
+        <form action="{{route('login.validate')}}" method="post">
 
-        <div class="mb-5">
-            <input id="pass" type="password" class="form-control" id="exampleInputEmail1" placeholder="Password">
-        </div>
+            @csrf
 
-        <button type="button" class="btn btn-primary mb-3" style="width:100%;" onclick="login()">Log In</button>
+            <div class="mb-4">
+                <input name="name" type="text" class="form-control" placeholder="Name">
+            </div>
+    
+            <div class="mb-5">
+                <input name="password" type="password" class="form-control" placeholder="Password">
+            </div>
+    
+            <button type="submit" class="btn btn-primary mb-3" style="width:100%;">Log In</button>
+        </form>
 
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        
+        @if(session('error'))
+
+        <script>
+            Swal.fire({
+                title: "Error",
+                text: "{{session('error')}}",
+                icon: "error"
+            });
+        </script>
+
+        @endif
+        
+        
     </div>
 </body>
 <script src="{{asset('js/auth.js')}}"></script>

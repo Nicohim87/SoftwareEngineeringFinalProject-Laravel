@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+use App\Http\Controllers\AuthController;
 
 Route::get('/', function () {
     return view('user/home');
@@ -23,11 +25,13 @@ Route::get('/dietary', function() {
 
 //Admin Page
 
-Route::get('/auth', function(){
-    return view('admin/auth');
-})->name('auth');
+Route::get('/auth', [AuthController::class, 'index'])->name('login');
 
-Route::prefix('admin')->group(function() {
+Route::post('/auth', [AuthController::class, 'login'])->name('login.validate');
+
+Route::middleware('auth')->get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::prefix('admin')->middleware('auth')->group(function() {
     Route::get('/', function() {
         return view('admin/home');
     })->name('admin.home');

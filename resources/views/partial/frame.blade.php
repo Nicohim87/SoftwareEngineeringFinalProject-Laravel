@@ -3,8 +3,8 @@
         <h3 class="">FitTech Admin</h3>
     </div>
     <nav class="d-flex position-absolute align-items-center end-0">
-        <p class="name">Name</p>
-        <a aria-current="page" href="{{route('auth')}}"><p>Logout</p></a>
+        <p class="name">{{Auth::user()->name}}</p>
+        <a aria-current="page" href="{{route('logout')}}"><p>Logout</p></a>
     </nav>
 </div>
 
