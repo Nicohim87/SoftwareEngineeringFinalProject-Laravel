@@ -10,7 +10,9 @@
 
 
 @section('content')
-<p>;akdflksadlkfsa</p>
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, consequuntur error aperiam quas perferendis ipsum?
+</p>
 @endsection
 
 

@@ -3,17 +3,24 @@ body{
     padding:0%;
     width: 100vw;
     overflow-x: hidden;
+    background-color: #F3F3FD !important;
 }
 
-#navbar{
+footer{ 
+    background-color: #F3F3FD !important;
+}
+
+nav{
     height: 13.5vh;
     width: 100vw;
     position:fixed;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
     padding-left: .5vw;
+    z-index: 100;
+    background-color: #F3F3FD !important;
 }
 
-#navbar .line{
+nav .line{
     height: 1.5px;
     width: 100%;
     background-image: linear-gradient(to left, #00000000, #3A8EF6, #703afae9, #3A8EF6, #00000000);
@@ -38,13 +45,13 @@ body{
     -webkit-text-fill-color: transparent;
 }
 
-nav{
+#navigate{
     align-items: center;
     height: 1em;
     padding-right: 5vw;
 }
 
-nav a{
+#navigate a{
     margin-right: 3vw;
     padding: 0% .3em;
     box-sizing: border-box !important;
@@ -52,18 +59,18 @@ nav a{
     color: #404040;
 }
 
-nav a p{
+#navigate a p{
     text-align: center;
     margin-bottom: 0px;
     font-weight: 500;
 }
 
-nav .active{
+#navigate .active{
     border-bottom:3px solid #6F3AFA;
     border-top:3px solid transparent;
 }
 
-nav a:hover{
+#navigate a:hover{
     color:black;
 }
 

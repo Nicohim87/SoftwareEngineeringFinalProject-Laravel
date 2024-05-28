@@ -3,18 +3,20 @@ body{
     padding:0%;
     width: 100vw;
     overflow-x: hidden;
+    background-color: #F3F3FD !important;
 }
 
-#navbar{
+nav{
     height: 13.5vh;
     width: 100vw;
     position:fixed;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
     padding-left: .5vw;
     background-color: #404040;
+    z-index: 1000;
 }
 
-#navbar .line{
+nav .line{
     height: 1.5px;
     width: 100%;
     background-image: linear-gradient(to left, #00000000, #3A8EF6, #703afae9, #3A8EF6, #00000000);
@@ -22,7 +24,6 @@ body{
 
 #logo{
     height:9vh;
-    margin-left:3vw;
 }
 
 #logo img{
@@ -33,34 +34,98 @@ body{
 #logo h3{
     text-align: center;
     margin-left: 2vh;
+    padding: 0;
     font-weight: 700;
     color:aliceblue;
+    text-decoration: underline #F3F3FD15;
 }
 
-nav{
+#navigate{
     align-items: center;
     height: 1em;
     padding-right: 5vw;
 }
 
-nav a{
+#navigate a{
     margin-right: 1vw;
     padding: 0% .3em;
     box-sizing: border-box !important;
     color: gray;
 }
 
-nav a:hover{
+#navigate a:hover{
     color:white;
 }
 
-nav a p, nav p{
+#navigate p{
     text-align: center;
     margin-bottom: 0px;
     font-weight: 500;
-    margin-left:3vw;
 }
 
-nav .name{
+#navigate .name{
     color: gray;
+    margin-right:3em;
+}
+
+#hamburger{
+    margin-left:2vw;
+    text-align: center;
+    z-index: 1100;
+}
+
+#hamburger i:hover{
+    color: #505050 !important;
+}
+
+/* -------------------------------------------- Sidebar -------------------------------------------- */
+
+#sidebar{
+    width: 20vw;
+    height: 86.5vh;
+    position:relative;
+    background-color: #202020;
+    z-index: 900;
+    box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+}
+
+.nav{
+    height: 4em;
+    width: inherit;
+    background-color: transparent;
+    margin:0;
+    position:relative;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.nav:hover{
+    background-color: #40404040;
+    p{
+        margin:0 4em;
+    }
+}
+
+.nav::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:3%;
+    width:94%;
+    height:1px;
+    background-color: #40404080;
+}
+
+.nav p{
+    text-decoration: none;
+    color:#808080;
+    text-align: left;
+    margin: 0 3em;
+    padding: 0;
+    font-weight: bold;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
 }

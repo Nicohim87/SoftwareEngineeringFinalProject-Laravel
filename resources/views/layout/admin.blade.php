@@ -6,14 +6,24 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{asset('css/frame.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     @yield('css')
 </head>
 <body>
     @include('partial.frame')
 
-    @yield('content')
+
+    <div class="d-flex">  
+        @include('partial.sidebar')
+
+        <div style="padding:5px;">
+            @yield('content')
+        </div>
+    </div>
+    
 
     @yield('js')
+    <script src="{{asset('js/frame.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
