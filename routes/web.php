@@ -32,7 +32,16 @@ Route::post('/auth', [AuthController::class, 'login'])->name('login.validate');
 Route::middleware('auth')->get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::prefix('admin')->middleware('auth')->group(function() {
-    Route::get('/', function() {
-        return view('admin/home');
-    })->name('admin.home');
+    Route::get('/dietary', function() {
+        return view('admin/dietary');
+    })->name('admin.dietary');
+    Route::get('/dietary/view', function() {
+        return view('admin/dietary-disp');
+    })->name('admin.dietary.view');
+    Route::get('/gym', function() {
+        return view('admin/gym');
+    })->name('admin.gym');
+    Route::get('/gym/view', function() {
+        return view('admin/gym-disp');
+    })->name('admin.gym.view');
 });

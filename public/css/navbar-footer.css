@@ -20,12 +20,6 @@ nav{
     background-color: #F3F3FD !important;
 }
 
-nav .line{
-    height: 1.5px;
-    width: 100%;
-    background-image: linear-gradient(to left, #00000000, #3A8EF6, #703afae9, #3A8EF6, #00000000);
-}
-
 #logo{
     height:9vh;
     margin-left:3vw;

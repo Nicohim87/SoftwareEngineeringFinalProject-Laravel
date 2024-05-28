@@ -3,6 +3,7 @@
         <img src="{{asset('favicon.png')}}" alt="" class="position-relative top-50 translate-middle-y">
         <h3 class="">FitTech</h3>
     </div>
+    
     <div class="d-flex position-absolute align-items-center end-0" id="navigate">
         <a aria-current="page" href="{{route('home')}}"><p>Home</p></a>
         <a aria-current="page" href="{{route('dietary')}}"><p>Dietary Programs</p></a>

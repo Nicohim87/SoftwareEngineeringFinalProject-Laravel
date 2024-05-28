@@ -16,14 +16,10 @@ nav{
     z-index: 1000;
 }
 
-nav .line{
-    height: 1.5px;
-    width: 100%;
-    background-image: linear-gradient(to left, #00000000, #3A8EF6, #703afae9, #3A8EF6, #00000000);
-}
-
 #logo{
     height:9vh;
+    text-align: center;
+    align-items: center;
 }
 
 #logo img{
@@ -32,12 +28,11 @@ nav .line{
 }
 
 #logo h3{
-    text-align: center;
     margin-left: 2vh;
     padding: 0;
+    margin-bottom: 0;
     font-weight: 700;
-    color:aliceblue;
-    text-decoration: underline #F3F3FD15;
+    color:aliceblue;    
 }
 
 #navigate{
@@ -83,7 +78,7 @@ nav .line{
 #sidebar{
     width: 20vw;
     height: 86.5vh;
-    position:relative;
+    position:fixed;
     background-color: #202020;
     z-index: 900;
     box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
@@ -105,7 +100,13 @@ nav .line{
 .nav:hover{
     background-color: #40404040;
     p{
-        margin:0 4em;
+        margin:0 3.5em;
+    }
+}
+
+.nav .active{
+    p{
+        margin: 0 4em;
     }
 }
 
@@ -128,4 +129,26 @@ nav .line{
     font-weight: bold;
     transition-duration: 200ms;
     transition-timing-function: ease-out;
+}
+
+#content{
+    margin:1em;
+    padding:1em;
+    box-sizing: border-box;
+    overflow-y:scroll;
+    border: 1px solid #80808080;
+    border-radius:20px;
+    scrollbar-width: 0;
+    -ms-overflow-style: none;
+}
+
+#contentBox{
+    margin-left:20vw;
+    width:80vw;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+}
+
+#content::-webkit-scrollbar{
+    display: none;
 }

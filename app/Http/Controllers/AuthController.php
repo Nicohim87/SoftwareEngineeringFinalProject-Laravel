@@ -24,13 +24,13 @@ class AuthController extends Controller
         $data = Admin::where('name', $validated['name'])->first();
 
         if($data == NULL){
-            return redirect()->back()->with('error', 'Nice try 🙃');
+            return redirect()->back()->with('error', 'Name not found');
         }
 
 
         if(Auth::attempt($validated)){
             session()->regenerate();
-            return redirect()->route('admin.home');
+            return redirect()->route('admin.dietary');
         }
         else{
             return redirect()->back()->with('error', 'Wrong Password');
