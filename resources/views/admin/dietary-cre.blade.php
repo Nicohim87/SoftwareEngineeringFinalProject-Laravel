@@ -20,10 +20,10 @@ img{
 
 @section('content')
 <div class="d-flex justify-content-between">
-    <h2 class="align-self-center">Edit Dietary Programs</h2>
+    <h2 class="align-self-center">Create Dietary Programs</h2>
     <a type="button" class="btn btn-warning" href="{{route('admin.dietary')}}"><b>Back</b></a>
 </div>
-<form class="mt-4" action="{{route('admin.dietary.update')}}" method="post">
+<form class="mt-4" action="{{route('admin.dietary.insert')}}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="d-flex">
         <img id="img-preview" src="{{asset('ImgNotFound.png')}}" alt="">
@@ -60,7 +60,7 @@ img{
 <script>
   Swal.fire({
     title: "Error",
-    html: "All fields must be filled <br> note: you need to reselect the image!",
+    html: "{{$errors->first()}} <br> note: you need to reselect the image!",
     icon: "warning"
   });
 </script>

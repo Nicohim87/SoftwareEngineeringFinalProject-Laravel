@@ -4,6 +4,7 @@
 
 
 @section('css')
+<link rel="stylesheet" href="{{asset('css/admin-gym.css')}}">
 @endsection
 
 

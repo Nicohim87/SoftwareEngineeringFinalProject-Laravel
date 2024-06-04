@@ -16,6 +16,8 @@
 
     @include('partial.sidebar')
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <div id="contentBox">
         <div id="content">
             @yield('content')

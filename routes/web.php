@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DietaryController;
 
 Route::get('/', function () {
     return view('user/home');
@@ -26,22 +28,16 @@ Route::get('/dietary', function() {
 //Admin Page
 
 Route::get('/auth', [AuthController::class, 'index'])->name('login');
-
 Route::post('/auth', [AuthController::class, 'login'])->name('login.validate');
-
 Route::middleware('auth')->get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::prefix('admin')->middleware('auth')->group(function() {
-    Route::get('/dietary', function() {
-        return view('admin/dietary');
-    })->name('admin.dietary');
-    Route::get('/dietary/view', function() {
-        return view('admin/dietary-disp');
-    })->name('admin.dietary.view');
-    Route::get('/gym', function() {
-        return view('admin/gym');
-    })->name('admin.gym');
-    Route::get('/gym/view', function() {
-        return view('admin/gym-disp');
-    })->name('admin.gym.view');
+Route::prefix('admin')->middleware(['web', 'auth'])->group(function() {
+    Route::get('/dietary', [AdminController::class, 'dietary'])->name('admin.dietary');
+    Route::get('/gym', [AdminController::class, 'gym'])->name('admin.gym');
+});
+
+Route::prefix('admin/dietary')->middleware(['web', 'auth'])->group(function() {
+    Route::get('/view', [DietaryController::class, 'read'])->name('admin.dietary.view');
+    Route::get('/create', [DietaryController::class, 'create'])->name('admin.dietary.create');
+    Route::post('/create', [DietaryController::class, 'insert'])->name('admin.dietary.insert');
 });
