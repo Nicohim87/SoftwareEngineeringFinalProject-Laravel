@@ -61,7 +61,7 @@ img{
   Swal.fire({
     title: "Error",
     html: "{{$errors->first()}} <br> note: you need to reselect the image!",
-    icon: "warning"
+    icon: "error"
   });
 </script>
 @endif

@@ -10,7 +10,7 @@ class AdminController extends Controller
 {
     public function dietary(){
         $dietaryData = DB::table('programs')->get()->toArray();
-        return view('admin/dietary')->with('dietaryData', $dietaryData);
+        return view('admin/dietary')->with('dietaryData', $dietaryData)->with('sort', 0);
     }
     public function gym(){
         return view('admin/gym');

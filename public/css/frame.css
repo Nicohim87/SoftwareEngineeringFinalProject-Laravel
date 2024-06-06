@@ -135,11 +135,8 @@ nav{
     margin:1em;
     padding:1em;
     box-sizing: border-box;
-    overflow-y:scroll;
     border: 1px solid #80808080;
     border-radius:20px;
-    scrollbar-width: 0;
-    -ms-overflow-style: none;
 }
 
 #contentBox{
@@ -149,6 +146,11 @@ nav{
     transition-timing-function: ease-out;
 }
 
-#content::-webkit-scrollbar{
+/* -------------------------------------------- Scrollbar -------------------------------------------- */
+
+body::-webkit-scrollbar{
     display: none;
+}
+body{
+    scrollbar-width: 0;
 }

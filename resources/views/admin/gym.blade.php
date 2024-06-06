@@ -5,6 +5,11 @@
 
 @section('css')
 <link rel="stylesheet" href="{{asset('css/admin-gym.css')}}">
+<style>
+    p{
+        margin:0
+    }
+</style>
 @endsection
 
 

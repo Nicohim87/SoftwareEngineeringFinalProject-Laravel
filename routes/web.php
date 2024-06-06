@@ -37,7 +37,11 @@ Route::prefix('admin')->middleware(['web', 'auth'])->group(function() {
 });
 
 Route::prefix('admin/dietary')->middleware(['web', 'auth'])->group(function() {
-    Route::get('/view', [DietaryController::class, 'read'])->name('admin.dietary.view');
+    Route::get('/view/{id}', [DietaryController::class, 'read'])->name('admin.dietary.view');
+    Route::post('/view/{id}', [DietaryController::class, 'update'])->name('admin.dietary.update');
     Route::get('/create', [DietaryController::class, 'create'])->name('admin.dietary.create');
     Route::post('/create', [DietaryController::class, 'insert'])->name('admin.dietary.insert');
+    Route::get('/delete/{id}', [DietaryController::class, 'conf'])->name('admin.dietary.delete.conf');
+    Route::delete('delete/{id}',[DietaryController::class, 'deletef'])->name('admin.dietary.delete');
+    Route::get('/{sort}', [DietaryController::class, 'sort'])->name('admin.dietary.sort');
 });
