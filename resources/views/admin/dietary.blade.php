@@ -7,8 +7,8 @@
 <link rel="stylesheet" href="{{asset('css/admin-dietary.css')}}">
 <style>
     .box{
-        height:20.5 em;
-        width:13.75em;
+        height:19em;
+        width:12em;
         padding:1em;
         border: 1px solid black;
         border-radius:1em;
@@ -22,6 +22,12 @@
     }
     p{
         margin:0
+    }
+    .h-line{
+    width:100%;
+    height:1px;
+    margin:10px 0;
+    background-color: #80808080;
     }
 </style>
 @endsection
@@ -58,7 +64,7 @@
             <p>Cutting</p>
             @break
       @endswitch
-      <div class="d-flex justify-content-end">
+      <div class="d-flex justify-content-end mt-3">
         <form action="{{route('admin.dietary.view', $item->id)}}" method="get">
             <button class="btn btn-warning me-3" type="submit"><i class="bi bi-pencil-fill"></i></button>
         </form>

@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('img');
-            $table->string('type');
+            $table->string('loc');
+            $table->string('map');
             $table->string('desc');
         });
     }

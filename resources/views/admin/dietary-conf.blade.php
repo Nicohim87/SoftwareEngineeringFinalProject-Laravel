@@ -13,6 +13,12 @@ img{
     width:15em;
     height:15em;  
 }
+.h-line{
+    width:100%;
+    height:1px;
+    margin:10px 0;
+    background-color: #80808080;
+}
 </style>
 @endsection
 
@@ -21,7 +27,7 @@ img{
 @section('content')
 <div class="d-flex justify-content-between">
     <h2 class="align-self-center">Are you sure you want to delete this data?</h2>
-    <a type="button" class="btn btn-warning" href="{{route('admin.dietary')}}"><b>Back</b></a>
+    <a type="button" class="btn btn-warning pt-2 pb-2" href="{{route('admin.dietary')}}"><b>Back</b></a>
 </div>
 <form class="mt-4" action="{{route('admin.dietary.delete', $data->id)}}" method="post">
     @csrf
