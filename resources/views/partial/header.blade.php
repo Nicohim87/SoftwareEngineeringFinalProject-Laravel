@@ -7,7 +7,7 @@
     <div class="d-flex position-absolute align-items-center end-0" id="navigate">
         <a aria-current="page" href="{{route('home')}}"><p>Home</p></a>
         <a aria-current="page" href="{{route('dietary')}}"><p>Dietary Programs</p></a>
-        <a aria-current="page" href="{{route('gym')}}"><p>Gym Membership</p></a>
+        <a aria-current="page" href="{{route('gym')}}"><p>Gym Locations</p></a>
         <a aria-current="page" href="{{route('bmi')}}"><p>BMI Calculator</p></a>
     </div>
 </nav>
