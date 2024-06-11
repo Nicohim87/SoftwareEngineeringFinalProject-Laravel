@@ -45,13 +45,15 @@
             <option value='0'>All</option>
             <option value="1"{{ $sort == '1' ? 'selected' : '' }}>Bulking</option>
             <option value="2"{{ $sort == '2' ? 'selected' : '' }}>Cutting</option>
+            <option value="3"{{ $sort == '3' ? 'selected' : '' }}>Diet</option>
+            <option value="4"{{ $sort == '4' ? 'selected' : '' }}>Maintenance</option>
         </select>
         <button type="submit" class="btn btn-secondary ms-3">Sort</button>
     </form>
 </div>
 <div class="h-line"></div>
 
-<div class="d-flex flex-wrap justify-content-center">
+<div class="d-flex flex-wrap justify-content-between">
     @foreach($dietaryData as $item)
     <div class="box">
       <img src="{{ asset('arch/' . $item->img) }}" alt="">
@@ -62,6 +64,12 @@
             @break
         @case(2)
             <p>Cutting</p>
+            @break
+        @case(3)
+            <p>Diet</p>
+            @break
+        @case(4)
+            <p>Maintenance</p>
             @break
       @endswitch
       <div class="d-flex justify-content-end mt-3">

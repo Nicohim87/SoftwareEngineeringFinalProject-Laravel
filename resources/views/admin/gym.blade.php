@@ -54,7 +54,7 @@ p{
 </div>
 <div class="h-line"></div>
 
-<div class="d-flex flex-wrap justify-content-center">
+<div class="d-flex flex-wrap justify-content-between">
     @foreach($gymData as $item)
     <div class="box d-flex">
       <img src="{{ asset('arch/' . $item->img) }}" alt="">

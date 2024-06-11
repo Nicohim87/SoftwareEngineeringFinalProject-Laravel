@@ -55,6 +55,12 @@ img{
                 @case(2):
                   <input name="type" type='text' class="form-control" aria-label="Select" value="Cutting"readonly>
                   @break
+                @case(3):
+                  <input name="type" type='text' class="form-control" aria-label="Select" value="Diet"readonly>
+                  @break
+                @case(4):
+                  <input name="type" type='text' class="form-control" aria-label="Select" value="Maintenance"readonly>
+                  @break
               @endswitch
             </div>
         </div>

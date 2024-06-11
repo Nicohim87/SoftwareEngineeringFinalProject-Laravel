@@ -100,3 +100,18 @@ nav{
     background-color: #0000002f;
     margin: 0px 2vw;
 }
+
+body::-webkit-scrollbar{
+    display: none !important;
+}
+body{
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important; 
+}
+html::-webkit-scrollbar{
+    display: none !important;
+}
+html{
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important; 
+}

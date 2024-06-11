@@ -50,6 +50,8 @@ img{
               <select name="type" class="form-select" aria-label="Select">
                 <option value="1" {{ $data->type == '1' ? 'selected' : '' }}>Bulking</option>
                 <option value="2" {{ $data->type == '2' ? 'selected' : '' }}>Cutting</option>
+                <option value="3" {{ $data->type == '3' ? 'selected' : '' }}>Diet</option>
+                <option value="4" {{ $data->type == '4' ? 'selected' : '' }}>Maintenance</option>
               </select>
             </div>
         </div>

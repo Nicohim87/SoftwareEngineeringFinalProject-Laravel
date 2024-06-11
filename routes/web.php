@@ -3,27 +3,26 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DietaryController;
 use App\Http\Controllers\GymController;
 
-Route::get('/', function () {
-    return view('user/home');
-})->name('home');
 
-Route::get('/bmi', function() {
-    return view('user/bmi');
-})->name('bmi');
+Route::prefix('')->group(function(){
+    Route::get('/', [UserController::class, 'home'])->name('home');
+    Route::get('/dietary', [UserController::class, 'dietary'])->name('dietary');
+    Route::get('/gym', [UserController::class, 'gym'])->name('gym');
+    Route::get('/bmi', [UserController::class, 'bmi'])->name('bmi');
+});
 
-Route::get('/gym', function() {
-    return view('user/gym');
-})->name('gym');
-
-Route::get('/dietary', function() {
-    return view('user/dietary');
-})->name('dietary');
-
-
+Route::prefix('dietary')->group(function(){
+    Route::get('/bulking', [UserController::class, 'bulking'])->name('dietary.bulking');
+    Route::get('/cutting', [UserController::class, 'cutting'])->name('dietary.cutting');
+    Route::get('/diet', [UserController::class, 'diet'])->name('dietary.diet');
+    Route::get('/maintenance', [UserController::class, 'maintenance'])->name('dietary.maintenance');
+    Route::get('/view/{id}', [UserController::class, 'dview'])->name('dietary.view');
+});
 
 
 //Admin Page

@@ -149,8 +149,16 @@ nav{
 /* -------------------------------------------- Scrollbar -------------------------------------------- */
 
 body::-webkit-scrollbar{
-    display: none;
+    display: none !important;
 }
 body{
-    scrollbar-width: 0;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important; 
+}
+html::-webkit-scrollbar{
+    display: none !important;
+}
+html{
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important; 
 }
