@@ -52,7 +52,9 @@
 @section('content')
 <div class="d-flex">
     <div>
-        <button class="btn btn-warning backbtn position-relative">Back</button>
+        <form action="{{route('dietary')}}">
+            <button class="btn btn-warning backbtn position-relative">Back</button>
+        </form>
         <div class='col-a'>
             <img src="{{asset('arch/' . $data->img)}}" alt="">
             <h2 class='mt-3'>{{$data->name}}</h2>
